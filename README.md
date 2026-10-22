@@ -41,7 +41,7 @@ The layout copies X's profile page:
 - **Entries** styled as posts: avatar, name, handle, date, and reply / repost / like / views / share counts. One entry is pinned with the house rules.
 - **Right sidebar** with a "Search your feelings" bar, a sold-out *Premium Introspection* offer, trends like `#InsufficientReflection`, and suggestions to follow JSLint and your future self.
 
-It follows your device's **light or dark mode**. On smaller screens it changes the same way X does: icon-only sidebar, then no right column, then a bottom tab bar with a floating **New Entry** button on phones.
+It's always in **dark mode**, matching X's "Lights out" theme. On smaller screens it changes the same way X does: icon-only sidebar, then no right column, then a bottom tab bar with a floating **New Entry** button on phones.
 
 None of the navigation, tabs, or Follow buttons do anything. They're for show.
 
@@ -79,7 +79,7 @@ There is no shortcut. There will never be a shortcut.
 | File | Purpose |
 | --- | --- |
 | `index.html` | The profile page and every journal entry. This is the only way to post. |
-| `style.css` | X-style layout, light/dark themes, responsive breakpoints, and icons (drawn with CSS masks so entries stay short to type). |
+| `style.css` | X-style dark layout, responsive breakpoints, and icons (drawn with CSS masks so entries stay short to type). |
 | `script.js` | The New Entry alert, word count enforcer, copy/paste blocking, and entry counter. Written to pass strict JSLint. |
 | `ci.yaml` | GitHub Actions workflow: JSLint, then deploy to GitHub Pages. |
 

@@ -21,23 +21,6 @@
     color-scheme: dark;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --bg: #ffffff;
-        --bg-blur: rgba(255, 255, 255, 0.85);
-        --surface: #f7f9f9;
-        --field: #eff3f4;
-        --text: #0f1419;
-        --muted: #536471;
-        --border: #eff3f4;
-        --hover: rgba(15, 20, 25, 0.1);
-        --compose-bg: #0f1419;
-        --compose-text: #ffffff;
-        --banner: linear-gradient(135deg, #cfe7fb 0%, #8ecdf7 45%, #c9b3e6 100%);
-        color-scheme: light;
-    }
-}
-
 *,
 *::before,
 *::after {
