@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+# Only one Pages deployment at a time. Never cancel one that is mid-flight.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  lint:
+    name: JSLint (no mercy)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install JSLint (pinned)
+        run: npm install --no-save --no-package-lock @jslint-org/jslint@2026.9.29
+
+      # JSLint exits non-zero on any warning, which fails the job
+      # and blocks the deploy job below.
+      - name: Lint script.js
+        run: node node_modules/@jslint-org/jslint/jslint.mjs script.js
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Stage site files
+        run: |
+          mkdir _site
+          cp index.html style.css script.js _site/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
