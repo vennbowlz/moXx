@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="moXx: an overly demanding personal journal.">
+    <meta name="theme-color" content="#000000">
+    <title>moXx (@moxx_journal) / moXx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- ===================== LEFT NAVIGATION ===================== -->
+        <header class="sidebar">
+            <a class="logo" href="#" aria-label="moXx home">mo<b>X</b>x</a>
+
+            <nav aria-label="Primary">
+                <ul class="nav">
+                    <li><a href="#"><i class="icon i-home"></i><span class="label">Home</span></a></li>
+                    <li><a href="#"><i class="icon i-search"></i><span class="label">Explore</span></a></li>
+                    <li><a href="#"><i class="icon i-bell"></i><span class="label">Notifications</span></a></li>
+                    <li><a href="#"><i class="icon i-mail"></i><span class="label">Messages</span></a></li>
+                    <li class="wide-only"><a href="#"><i class="icon i-bookmark"></i><span
+                                class="label">Bookmarks</span></a></li>
+                    <li class="wide-only"><a href="#"><i class="icon i-people"></i><span
+                                class="label">Communities</span></a></li>
+                    <li><a href="#" aria-current="page"><i class="icon i-person"></i><span
+                                class="label">Profile</span></a></li>
+                    <li class="wide-only"><a href="#"><i class="icon i-more"></i><span class="label">More</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button id="new-entry" class="compose" type="button">New Entry</button>
+
+            <div class="account">
+                <span class="avatar" aria-hidden="true">m</span>
+                <span class="who">
+                    <span class="name">moXx</span><br>
+                    <span class="handle">@moxx_journal</span>
+                </span>
+                <i class="icon i-dots"></i>
+            </div>
+        </header>
+
+        <!-- ===================== PROFILE + TIMELINE ===================== -->
+        <main class="column">
+            <div class="topbar">
+                <a class="back" href="#" aria-label="Back"><i class="icon i-back"></i></a>
+                <div>
+                    <h1>moXx</h1>
+                    <p class="muted" id="entry-count">0 entries</p>
+                </div>
+            </div>
+
+            <div class="banner" role="img" aria-label="Profile banner"></div>
+
+            <section class="profile" aria-label="Profile">
+                <div class="profile-top">
+                    <span class="avatar" aria-hidden="true">m</span>
+                    <span class="outline-pill" title="You know where the HTML file is.">Edit profile</span>
+                </div>
+
+                <h2>moXx <span class="badge" title="Verified by JSLint"></span></h2>
+                <p class="handle">@moxx_journal</p>
+
+                <p class="bio">
+                    An overly demanding personal journal. New entries are written by hand in
+                    index.html, committed, and pushed. Short thoughts are deleted on sight.
+                </p>
+
+                <ul class="meta">
+                    <li><i class="icon i-calendar"></i>Joined October 2026</li>
+                </ul>
+
+                <div class="stats muted">
+                    <span><b>0</b> Following</span>
+                    <span><b>1</b> Follower</span>
+                </div>
+            </section>
+
+            <nav class="tabs" aria-label="Profile timelines">
+                <a href="#" aria-current="page">Posts</a>
+                <a href="#">Replies</a>
+                <a href="#">Highlights</a>
+                <a href="#">Articles</a>
+                <a href="#">Media</a>
+                <a href="#">Likes</a>
+            </nav>
+
+            <section id="timeline" aria-label="Journal entries">
+
+                <!--
+    ==================== HOW TO ADD AN ENTRY ====================
+    There is no shortcut. There will never be a shortcut.
+
+    1. Type (do not paste) a new <article class="entry"> block below this
+       comment, newest at the top, just under the pinned entry.
+    2. Write at least 50 words inside the <p>. Fewer, and it gets
+       replaced at runtime with a note about your lack of reflection.
+    3. git add index.html && git commit -m "a meaningful message"
+    4. git push origin main, then wait for JSLint to judge you.
+
+    <article class="entry">
+        <span class="avatar" aria-hidden="true">m</span>
+        <div class="entry-body">
+            <div class="entry-head">
+                <span class="name">moXx</span><span class="badge"></span>
+                <span class="handle">@moxx_journal</span>
+                <time datetime="2026-10-22">Oct 22</time>
+            </div>
+            <p>At least fifty words of honest reflection go here.</p>
+            <div class="actions">
+                <span class="act reply">0</span>
+                <span class="act repost">0</span>
+                <span class="act like">0</span>
+                <span class="act views">1</span>
+                <span class="act share"></span>
+            </div>
+        </div>
+    </article>
+-->
+
+                <!-- Pinned -->
+                <article class="entry">
+                    <span class="avatar" aria-hidden="true">m</span>
+                    <div class="entry-body">
+                        <div class="pinned"><i class="icon i-pin"></i>Pinned</div>
+                        <div class="entry-head">
+                            <span class="name">moXx</span><span class="badge"></span>
+                            <span class="handle">@moxx_journal</span>
+                            <time datetime="2026-10-18">Oct 18</time>
+                        </div>
+                        <p>House rules for this journal. One: there is no New Entry button. There is a
+                            button labeled New Entry, which is different. Two: every entry is written by
+                            hand in index.html, committed, and pushed. Three: anything under fifty words is
+                            deleted on sight. Four: your past thoughts cannot be copied, cut, or pasted.
+                            Sleep well.</p>
+                        <div class="actions">
+                            <span class="act reply">0</span>
+                            <span class="act repost">0</span>
+                            <span class="act like">0</span>
+                            <span class="act views">1</span>
+                            <span class="act share"></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <span class="avatar" aria-hidden="true">m</span>
+                    <div class="entry-body">
+                        <div class="entry-head">
+                            <span class="name">moXx</span><span class="badge"></span>
+                            <span class="handle">@moxx_journal</span>
+                            <time datetime="2026-10-21">Oct 21</time>
+                        </div>
+                        <p>Tried to push a two-line entry about my lunch yesterday. JSLint did not care
+                            about my lunch, but the word count enforcer did, and it swapped the whole thing
+                            for a lecture about insufficient reflection. So here is the reflection: the
+                            sandwich was fine. It was a perfectly adequate sandwich, eaten too fast, at a
+                            desk, while reading build logs. That is the entry.</p>
+                        <div class="actions">
+                            <span class="act reply">0</span>
+                            <span class="act repost">0</span>
+                            <span class="act like">0</span>
+                            <span class="act views">1</span>
+                            <span class="act share"></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <span class="avatar" aria-hidden="true">m</span>
+                    <div class="entry-body">
+                        <div class="entry-head">
+                            <span class="name">moXx</span><span class="badge"></span>
+                            <span class="handle">@moxx_journal</span>
+                            <time datetime="2026-10-20">Oct 20</time>
+                        </div>
+                        <p>Had a sandwich. It was fine. Back to work.</p>
+                        <div class="actions">
+                            <span class="act reply">0</span>
+                            <span class="act repost">0</span>
+                            <span class="act like">0</span>
+                            <span class="act views">1</span>
+                            <span class="act share"></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <span class="avatar" aria-hidden="true">m</span>
+                    <div class="entry-body">
+                        <div class="entry-head">
+                            <span class="name">moXx</span><span class="badge"></span>
+                            <span class="handle">@moxx_journal</span>
+                            <time datetime="2026-10-19">Oct 19</time>
+                        </div>
+                        <p>Day one of journaling the hard way. I wanted to jot down a quick thought from
+                            my phone and instead found myself opening a code editor, scrolling to the
+                            timeline, typing out the entry template by hand because pasting is apparently a
+                            moral failing, and writing a commit message longer than the thought itself. The
+                            thought was about patience. I think I get it now.</p>
+                        <div class="actions">
+                            <span class="act reply">0</span>
+                            <span class="act repost">0</span>
+                            <span class="act like">0</span>
+                            <span class="act views">1</span>
+                            <span class="act share"></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <span class="avatar" aria-hidden="true">m</span>
+                    <div class="entry-body">
+                        <div class="entry-head">
+                            <span class="name">moXx</span><span class="badge"></span>
+                            <span class="handle">@moxx_journal</span>
+                            <time datetime="2026-10-22">Oct 22</time>
+                        </div>
+                        <p>At least fifty words of honest reflection go here.</p>
+                        <div class="actions">
+                            <span class="act reply">0</span>
+                            <span class="act repost">0</span>
+                            <span class="act like">0</span>
+                            <span class="act views">1</span>
+                            <span class="act share"></span>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <p class="timeline-end">You have reached the end. Write more.</p>
+        </main>
+
+        <!-- ===================== RIGHT COLUMN ===================== -->
+        <aside class="widgets" aria-label="Sidebar">
+            <div class="search"><i class="icon i-search"></i>Search your feelings</div>
+
+            <section class="panel">
+                <h3>Subscribe to Premium Introspection</h3>
+                <p>Unlock longer entries, harsher rejections, and an even narrower viewing window.</p>
+                <span class="pill">Sold out</span>
+            </section>
+
+            <section class="panel">
+                <h3>What&rsquo;s happening</h3>
+                <div class="row">
+                    <div class="grow"><small>Trending in Introspection</small><b>#InsufficientReflection</b><small>4
+                            entries</small></div>
+                </div>
+                <div class="row">
+                    <div class="grow"><small>Build &middot; Trending</small><b>JSLint</b><small>Refuses to
+                            elaborate</small></div>
+                </div>
+                <div class="row">
+                    <div class="grow"><small>Trending</small><b>#CtrlCDenied</b><small>Nothing to copy here</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h3>Who to follow</h3>
+                <div class="row">
+                    <span class="avatar" aria-hidden="true">J</span>
+                    <div class="grow"><b class="name">JSLint</b><small>@jslint &middot; Strict.</small></div>
+                    <span class="follow">Follow</span>
+                </div>
+                <div class="row">
+                    <span class="avatar" aria-hidden="true">Y</span>
+                    <div class="grow"><b class="name">Tomorrow You</b><small>@future_self</small></div>
+                    <span class="follow">Follow</span>
+                </div>
+            </section>
+
+            <div class="legal">
+                <span>Terms of Suffering</span>
+                <span>Privacy Policy</span>
+                <span>Accessibility</span>
+                <span>&copy; 2026 moXx</span>
+            </div>
+        </aside>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
