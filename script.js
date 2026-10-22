@@ -24,11 +24,11 @@ document.getElementById("new-entry").addEventListener("click", function () {
 // 3. Anti-plagiarism. Your past thoughts stay where you left them.
 
 function refuse(event) {
-    event.preventDefault();
+    event.preventDefault()
 }
 
 BLOCKED_EVENTS.forEach(function (type) {
-    document.addEventListener(type, refuse);
+    document.addEventListener(type, refuse)
 });
 
 document.addEventListener("keydown", function (event) {
@@ -61,3 +61,4 @@ window.addEventListener("load", function () {
 
     counter.textContent = entries.length + " entries";
 });
+
