@@ -21,17 +21,41 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install JSLint (pinned)
         run: npm install --no-save --no-package-lock @jslint-org/jslint@2026.9.29
 
       # JSLint exits non-zero on any warning, which fails the job
-      # and blocks the deploy job below.
+      # and blocks the test and deploy jobs below.
       - name: Lint script.js
         run: node node_modules/@jslint-org/jslint/jslint.mjs script.js
 
+  test:
+    name: Jest
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Jest (pinned)
+        run: npm install --no-save --no-package-lock jest@30.5.2
+
+      - name: Run Jest tests
+        run: npx jest script.test.js --runInBand
+
   deploy:
     name: Deploy to GitHub Pages
-    needs: lint
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read

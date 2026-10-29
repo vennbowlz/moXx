@@ -1,0 +1,24 @@
+{
+  "name": "moxx",
+  "version": "1.0.0",
+  "description": "**An overly demanding personal journal that looks like an X profile and punishes you for wanting convenience.**",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vennbowlz/moXx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vennbowlz/moXx/issues"
+  },
+  "homepage": "https://github.com/vennbowlz/moXx#readme",
+  "dependencies": {
+    "jest": "^30.5.2"
+  }
+}
