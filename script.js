@@ -13,7 +13,7 @@ const REJECTED = (
 );
 
 const BLOCKED_KEYS = ["c", "v", "x"];
-const BLOCKED_EVENTS = ["copy", "cut", "paste"];
+const BLOCKED_EVENTS = ["copy", "cut", "paste", "dragstart"];
 
 // 1. The mocking "New Entry" button.
 
