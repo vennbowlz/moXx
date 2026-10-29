@@ -51,7 +51,7 @@ jobs:
         run: npm install --no-save --no-package-lock jest@30.5.2
 
       - name: Run Jest tests
-        run: npx jest script.test.js --runInBand
+        run: node node_modules/jest/bin/jest.js script.test.js --runInBand
 
   deploy:
     name: Deploy to GitHub Pages
